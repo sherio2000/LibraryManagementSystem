@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:librarydb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+    initialization-mode: always
+  h2:
+    console:
+      enabled: true
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+      hibernate:
+        ddl-auto: update #to prevent manual table creation
+        show-sql: true # to print all sql queries to be excuted
+token:
+  signing:
+    key: 413F4428472B4B6250655368566D5970337336763979244226452948404D6351
+
+springdoc:
+  swagger-ui:
+    oauth:
+      enabled: false  # Disable OAuth authentication
+    operationsSorter: method  # Optional: Sort API operations by method
+
+
+
+######### Developed by: Sherif Magdy #############
+#########        www.sherio.me       #############
